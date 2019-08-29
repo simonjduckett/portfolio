@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import { Home } from './components/Home';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Rellax from 'rellax';
+import { Menu } from './components/menu';
+import { Projects } from './components/projects';
+import { PageNotFound } from './components/PageNotFound';
 
 class App extends Component {
+
+    componentDidMount(){
+      var rellax = new Rellax('.rellax');
+      AOS.init();
+    }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/' render={() => { return <Home /> }} />
+            <Route path='/menu' render={() => { return <Menu /> }} />
+            <Route path='/projects' render={() => { return <Projects /> }} />
+            <Route component={PageNotFound} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
