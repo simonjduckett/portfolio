@@ -1,0 +1,30 @@
+body {
+    font-family: 'avenir-book' !important;
+}
+
+.flex {
+    display: flex;
+    @include breakpoint('mobile'){
+        display: block;
+    }
+}
+
+.half {
+    width: 50%;
+    @include breakpoint('mobile'){
+        width: 100%;
+    }
+}
+
+.min-height {
+    min-height: 100vh;
+}
+
+.col-sm {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+.padding-top {
+    padding-top: 100px;
+}

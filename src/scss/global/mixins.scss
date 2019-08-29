@@ -1,0 +1,12 @@
+@mixin breakpoint($size){
+    @if $size == 'mobile' {
+        $size: 600px;
+    }
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin darkSection() {
+    
+}
