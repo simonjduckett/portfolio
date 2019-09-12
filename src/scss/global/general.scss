@@ -26,5 +26,13 @@ body {
 }
 
 .padding-top {
-    padding-top: 100px;
+    padding-top: 80px;
+}
+
+a {
+    color: #333333 !important;
+    &:hover {
+        text-decoration: none !important;
+        color: #333333;
+    }
 }

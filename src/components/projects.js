@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom';
-import FontAwesome from 'react-fontawesome';
-import { Link } from 'react-router-dom';
-import { Topbar } from './topbar';
-import { Web } from './web';
-import { Music } from './music';
+import { Route, NavLink } from 'react-router-dom';
+import { Projecttable } from './project-table';
+import data from '../data.json';
 
 export class Projects extends Component {
+
     render() {
+        let web = data.projects[0].web.length
+        let music = data.projects[0].music.length
         return (
-            <div className='padding-top'>
-                <Topbar color={'topbar topbar__dark'} />
-                    <div className='container'>
+            <div id='projects' className='padding-top'>
+                    <div className='container-fluid'>
                         <h1>Projects</h1>
-                        <Link to={'/projects/web'}>Web</Link>
-                        <Link to={'/projects/music'}>Music</Link>
-                        <hr />
-                        <Route path='/projects/web' render={() => { return <Web /> }} />
-                        <Route path='/projects/music' render={() => { return <Music /> }} />
-
+                        <div id='subnav'>
+                        <NavLink 
+                            activeClassName='activeNavLink' 
+                            className='proj-menu-link' 
+                            to={'/projects/web'}>Web ({web})
+                        </NavLink>
+                        <NavLink 
+                            activeClassName='activeNavLink' 
+                            className='proj-menu-link' 
+                            to={'/projects/music'}>Music ({music})
+                        </NavLink>
+                            <hr />
+                            <Route path='/projects/web' render={() => { return <Projecttable data={data.projects[0].web} /> }} />
+                            <Route path='/projects/music' render={() => { return <Projecttable data={data.projects[0].music} /> }} />
+                        </div>
                     </div>
-
-                
             </div>
         );
     }

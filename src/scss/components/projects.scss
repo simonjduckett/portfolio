@@ -1,0 +1,28 @@
+#projects {
+    z-index: 400;
+    h1 {
+        font-size: 70px;
+        font-weight: bolder;
+    }
+
+    #subnav {
+        margin-top: 70px;
+    }
+    h2 {
+        margin-bottom: 0;
+        font-size: 44px;
+    }
+}
+
+.project-table {
+    z-index: 400;
+    td {
+        text-align: left;
+        padding: 10px;
+        padding-bottom: 40px;
+        &:nth-of-type(2) {
+            padding-left: 70px;
+            width: 100%;
+        }
+    }
+}

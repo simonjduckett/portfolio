@@ -1,5 +1,6 @@
+$delay: 0.5s;
+
 header {
-    background-color: #504b4b;
     width: 100%;
     height: 100vh;
     p {
@@ -9,7 +10,7 @@ header {
 }
 
 .hero-text {
-    color: #ffffff;
+    color: #000000;
     max-width: 500px;
     text-align: center;
     margin: 0 auto 0 auto;
@@ -20,4 +21,20 @@ header {
         font-size: 62px !important;
         font-family: 'avenir-heavy';
     }
+}
+
+#htext {
+    transition: opacity $delay;
+}
+
+#hero-image {
+    float: right;
+    background-image: url('../images/beach.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition-property: width, background-position;
+    transition-duration: 0.5s;
+    transition-delay: $delay;
 }

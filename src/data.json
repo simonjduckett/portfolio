@@ -1,0 +1,68 @@
+{
+    "projects": [
+        {
+            "web": [
+                {
+                    "name": "Project one",
+                    "tech": "React",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "Project two",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "Project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "Project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "Project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                },
+                {
+                    "name": "project three",
+                    "tech": "php",
+                    "type": "freelance",
+                    "img": "/images/beach.jpg"
+                }
+            ],
+            "music": [
+                {
+                    "name": "Slug Race",
+                    "tech": "Music",
+                    "type": "freelance"
+                },
+                {
+                    "name": "Parade",
+                    "tech": "Music",
+                    "type": "freelance"
+                }
+            ]
+        }
+    ]
+}

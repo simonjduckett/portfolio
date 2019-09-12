@@ -1,0 +1,21 @@
+#introtextcontainer {
+    width: 0;
+    padding: 50px;
+    transition: width 0.1s;
+    transition-delay: 0.5s;
+}
+
+#intro-text {
+    margin-top: 40%;
+    max-width: 320px;
+    padding-left: 10%;
+    opacity: 0;
+    transition: opacity 2s;
+    transition-delay: 1s;
+    text-align: left;
+    color: black !important;
+
+    p {
+        color: black;
+    }
+}
