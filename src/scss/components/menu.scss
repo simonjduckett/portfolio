@@ -9,22 +9,30 @@
     z-index: 500;
 }
 
+.menu-container {
+  position: relative;
+  top: 10%;
+}
+
 .show {
         display: block !important;
     }
 
 .menu-link {
     color: #333333;
-    font-size: 48px !important;
+    font-size: 68px !important;
     font-weight: bold;
 }
 
 .proj-menu-link {
     padding: 10px 20px 10px 20px;
-    color: #333333;
+    color: #b6b6b6 !important;
+    font-weight: bolder;
+    transition: color 0.5s;
+    font-size: 15px;
     &:hover {
         text-decoration: none;
-        color: #333333;
+        color: #333333 !important;
     }
 }
 

@@ -5,6 +5,11 @@ import data from '../data.json';
 
 export class Projects extends Component {
 
+    componentDidMount() {
+        document.getElementById('topbar').style.visibility = 'visible';
+        document.getElementById('topbar').style.opacity = '1';
+    }
+
     render() {
         let web = data.projects[0].web.length
         let music = data.projects[0].music.length

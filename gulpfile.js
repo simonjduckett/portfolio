@@ -15,7 +15,7 @@ gulp.task('sass', function (done) {
 
 // Images
 gulp.task('images', () =>
-    gulp.src('src/images/*')
+    gulp.src('src/assets/images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'))
 );
@@ -23,5 +23,5 @@ gulp.task('images', () =>
 // Watch for changes
 gulp.task('watch', function () {
     gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
-    gulp.watch('src/images/*', gulp.series('images'));
+    gulp.watch('src/assets/images/*', gulp.series('images'));
 });

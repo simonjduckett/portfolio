@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { Topbar } from './components/topbar';
@@ -13,9 +13,21 @@ import { PageNotFound } from './components/PageNotFound';
 
 class App extends Component {
 
-    componentDidMount(){
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstload: true
+    }
+
+    this.logfirstload = this.logfirstload.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  componentDidMount(){
       //var rellax = new Rellax('.rellax');
       AOS.init();
+      
     }
 
   toggleMenu() {
@@ -26,18 +38,23 @@ class App extends Component {
     ham.classList.toggle("change");
   }
 
+  logfirstload(){
+    this.setState({ firstload: false })
+  }
+
   render() {
+    var x = window.matchMedia("(max-width: 600px)")
     return (
       <div className="App">
-        <BrowserRouter>
-          <Topbar color={'topbar topbar__dark'} toggleMenu={this.toggleMenu} />
+        <HashRouter>
+          <Topbar toggleMenu={this.toggleMenu} />
           <Menu toggleMenu={this.toggleMenu} />
           <Switch>
-            <Route exact path='/' render={() => { return <Home /> }} />
+            <Route exact path='/' render={() => { return <Home logfirstload={this.logfirstload} firstload={this.state.firstload} x={x} /> }} />
             <Route path='/projects' render={() => { return <Projects /> }} />
             <Route component={PageNotFound} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }

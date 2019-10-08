@@ -1,4 +1,8 @@
-.topbar {
+#topbar {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 2s;
     position: fixed;
     top: 0;
     left: 0;

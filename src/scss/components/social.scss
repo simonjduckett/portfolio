@@ -1,0 +1,14 @@
+#social {
+    float: right;
+    @include breakpoint('mobile'){
+        float: left;
+    }
+    a {
+        padding: 20px 20px 0 0;
+        font-size: 22px;
+        &:hover {
+            color: #d8d8d8;
+        }
+    }
+    
+}

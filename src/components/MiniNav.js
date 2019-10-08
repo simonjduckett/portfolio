@@ -5,9 +5,14 @@ const MiniNav = () => {
     return (
         <div id='mini-nav'>
             <Link
-                className=''
+                className='mini-nav-link'
                 to={'/projects/web'}
-                >Projects
+                >Web
+            </Link>
+            <Link
+                className='mini-nav-link'
+                to={'/projects/music'}
+            >Music
             </Link>
         </div>
     )

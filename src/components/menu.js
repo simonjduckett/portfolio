@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Social } from './social';
 
 export const Menu = (props) => {
     return (
         <div id='menu' className='padding-top'>
-            <div className='min-height container'>
+            <div className='min-height container menu-container'>
                 <div className='row text-left'>
                     <div className='col-md-6'>
                         <p>
@@ -24,12 +25,18 @@ export const Menu = (props) => {
                     <div className='col-md'>
                         <span>Phone</span><br />
                         <p>+44 7794 445214</p>
+                        
                     </div>
                     <div className='col-md'>
                         <span>Email</span><br />
-                        <p>simon@simonduckett.com</p>
+                        <p><a href='mailto:simonjduckett@hotmail.co.uk'>simon@simonduckett.com</a></p>
+                        
                     </div>
-                
+                </div>
+                <div className='row'>
+                    <div className='col-lg-12'>
+                        <Social />
+                    </div>
                 </div>
             </div>
         </div>

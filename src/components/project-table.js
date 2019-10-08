@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 export class Projecttable extends Component {
 
+    link(x){
+        window.location = x;
+    }
+
     render() {
         return (
             <div className='' data-aos="fade-up">
@@ -9,11 +13,14 @@ export class Projecttable extends Component {
                     <tbody>
                         {this.props.data.map((project, i) => {
                             return (
-                                <tr key={i} data-aos='fade-up'>
-                                    <td>
-                                        <img alt='project-img' width='350' height='175' src={project.img}/>
+                                <tr className='project-row' key={i} data-aos='fade-up' onClick={() => window.open(project.link)}>
+                                    <td >
+                                        <div className='project-img'>
+                                            <img alt='project-img' src={project.img} />
+                                        </div>
+                                        
                                     </td>
-                                    <td>
+                                    <td className='project-text'>
                                         <h2><strong>{project.name}</strong></h2>
                                         <span>{project.tech}</span>
                                     </td>

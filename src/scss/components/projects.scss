@@ -1,7 +1,7 @@
 #projects {
     z-index: 400;
     h1 {
-        font-size: 70px;
+        font-size: 65px;
         font-weight: bolder;
     }
 
@@ -16,6 +16,7 @@
 
 .project-table {
     z-index: 400;
+    width: 100%;
     td {
         text-align: left;
         padding: 10px;
@@ -23,6 +24,51 @@
         &:nth-of-type(2) {
             padding-left: 70px;
             width: 100%;
+            @include breakpoint('mobile') {
+                padding-left: 0px;
+            }
+        }
+        @include breakpoint('mobile') {
+            display: block;
+            width: 100%;
+            text-align: center;
+            
         }
     }
+}
+
+.project-img {
+    overflow: hidden;
+    width: 275px;
+    height: 175px;;
+        img {
+            transition: transform 2s;
+        width: 100%;
+    }
+    @include breakpoint('mobile'){
+        width: 100%;
+        img {
+            object-fit: cover !important;
+        }
+        
+    }
+}
+
+.project-row {
+    cursor: pointer;
+    background-color: #ffffff;
+    //transition: background-color 0.7s !important;
+    &:hover {
+        background-color: #f8f8f8;
+        .project-img img {
+            transform: scale(1.075);
+        }
+        .project-text {
+            padding-left: 50px;
+        }
+    }
+}
+
+.project-text {
+    transition: padding-left 0.5s;
 }

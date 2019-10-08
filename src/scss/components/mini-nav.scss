@@ -1,0 +1,15 @@
+#mini-nav {
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 2s;
+    text-align: left;
+
+}
+
+.mini-nav-link {
+    padding-right: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: underline;
+    line-height: 30px;
+}
